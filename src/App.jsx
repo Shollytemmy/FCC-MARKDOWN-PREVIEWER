@@ -2,6 +2,8 @@ import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import './App.css'
+import { Editor } from './Components/Editor'
+import { Preview } from './Components/Preview'
 
 const markdown = `# heading 1
 ## heading 2
@@ -33,10 +35,19 @@ const dectet = (name) => \`You are ${name}\`
 function App() {
   const [inputValue, setInputValue] = useState({text: markdown}) 
 
+  const handleChange = (event) => {
+
+    setInputValue({ text: event.target.value})
+    console.log('inputValue', inputValue)
+  
+  }
+
   
 
   return (
     <div className="App">
+      <Editor handleChange={handleChange} inputValue={inputValue} />
+      <Preview inputValue={inputValue} />
       
     </div>
   )

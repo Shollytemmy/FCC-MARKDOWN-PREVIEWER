@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import './App.css'
+import './App.scss'
 import { Editor } from './Components/Editor'
 import { Preview } from './Components/Preview'
 
@@ -26,6 +26,7 @@ const dectet = (name) => \`You are ${name}\`
 
 
 ![Markdown Logo](https://markdown-here.com/img/icon256.png)
+
 
 
   

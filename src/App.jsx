@@ -38,7 +38,7 @@ function App() {
   const handleChange = (event) => {
 
     setInputValue({ text: event.target.value})
-    console.log('inputValue', inputValue)
+    
   
   }
 
